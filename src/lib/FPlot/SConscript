@@ -1,0 +1,15 @@
+Import('env')
+
+cpps = Split("""
+    MainWindow.cpp
+    PlotArea.cpp
+""")
+
+class_objs = []
+
+for cpp in cpps:
+    class_obj = env.Object(cpp)
+    class_objs.append(class_obj)
+
+Return('class_objs')
+

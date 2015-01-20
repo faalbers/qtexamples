@@ -1,0 +1,16 @@
+#include "ImageUpdate/MainWindow.h"
+#include <QtGui/QHBoxLayout>
+
+MainWindow::MainWindow(QWidget *parent, Qt::WindowFlags flags)
+    :   QMainWindow(parent, flags)
+{
+    setWindowTitle(tr("Image Updater"));
+
+    QHBoxLayout *layout = new QHBoxLayout;
+    //layout->addWidget(spinBox);
+    //layout->addWidget(slider);
+
+    //glWidget = new GLWidget;
+    
+    setCentralWidget(layout);
+}

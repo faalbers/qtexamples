@@ -1,0 +1,9 @@
+Import('env')
+
+env.Library('FPlot', SConscript('FPlot/SConscript'))
+env.Library('MThread', SConscript('MThread/SConscript'))
+env.Library('OGL', SConscript('OGL/SConscript'))
+env.Library('ShootGame', SConscript('ShootGame/SConscript'))
+
+
+

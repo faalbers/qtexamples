@@ -1,0 +1,16 @@
+Import('env')
+
+cpps = Split("""
+    GLWidget.cpp
+    MainWindow.cpp
+    ShaderUtils.cpp
+""")
+
+class_objs = []
+
+for cpp in cpps:
+    class_obj = env.Object(cpp)
+    class_objs.append(class_obj)
+
+Return('class_objs')
+

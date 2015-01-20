@@ -1,0 +1,11 @@
+Import('env')
+
+progname = 'fplot'
+
+env.Program(progname, 'main.cpp')
+env.Append(LIBS=['FPlot'])
+
+if env['PLATFORM'] == 'posix':
+    env.Install('#inst/bin', progname)
+elif env['PLATFORM'] == 'win32':
+    env.Install('#inst/bin', '%s.exe' % progname)

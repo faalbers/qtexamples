@@ -1,0 +1,16 @@
+Import('env')
+
+cpps = Split("""
+    CannonField.cpp
+    GameBoard.cpp
+    LCDRange.cpp
+""")
+
+class_objs = []
+
+for cpp in cpps:
+    class_obj = env.Object(cpp)
+    class_objs.append(class_obj)
+
+Return('class_objs')
+

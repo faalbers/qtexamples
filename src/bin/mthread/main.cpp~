@@ -1,0 +1,17 @@
+#include <QtGui/QApplication>
+#include <iostream>
+
+#include "MThread/MainWindow.h"
+
+using namespace std;
+
+int main(int argv, char **args)
+{
+    cout << "Running mthread" << endl;
+    QApplication app(argv, args);
+    MainWindow mainWindow;
+    mainWindow.talk();
+    mainWindow.show();
+    return app.exec();
+}
+

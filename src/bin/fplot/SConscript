@@ -1,0 +1,12 @@
+Import('env')
+envc = env.Clone()
+
+progname = 'fplot'
+
+envc.Program(progname, 'main.cpp')
+envc.Append(LIBS=['FPlot'])
+
+if envc['PLATFORM'] == 'posix':
+    envc.Install('#inst/bin', progname)
+elif envc['PLATFORM'] == 'win32':
+    envc.Install('#inst/bin', '%s.exe' % progname)
