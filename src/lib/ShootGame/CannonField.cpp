@@ -1,8 +1,8 @@
-#include <QtCore/QDateTime>
-#include <QtGui/QMouseEvent>
-#include <QtGui/QPaintEvent>
-#include <QtGui/QPainter>
-#include <QtCore/QTimer>
+#include <QDateTime>
+#include <QMouseEvent>
+#include <QPaintEvent>
+#include <QPainter>
+#include <QTimer>
 
 #include <math.h>
 #include <stdlib.h>
@@ -110,7 +110,7 @@ void CannonField::moveShot()
         emit missed();
         emit canShoot(true);
     } else {
-        region = region.unite(shotR);
+        region = region.united(shotR);
     }
     update(region);
 }

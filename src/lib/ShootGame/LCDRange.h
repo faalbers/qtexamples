@@ -1,7 +1,7 @@
 #ifndef LCDRANGE_H
 #define LCDRANGE_H
 
-#include <QtGui/QWidget>
+#include <QWidget>
 
 class QLabel;
 class QSlider;

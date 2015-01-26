@@ -1,7 +1,7 @@
 #ifndef GAMEBOARD_H
 #define GAMEBOARD_H
 
-#include <QtGui/QWidget>
+#include <QWidget>
 
 class QLCDNumber;
 class CannonField;

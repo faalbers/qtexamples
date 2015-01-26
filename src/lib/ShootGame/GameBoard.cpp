@@ -1,17 +1,17 @@
-#include <QtGui/QApplication>
-#include <QtGui/QFont>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QLCDNumber>
-#include <QtGui/QLabel>
-#include <QtGui/QPushButton>
-#include <QtGui/QShortcut>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QWidget>
+#include <QApplication>
+#include <QFont>
+#include <QGridLayout>
+#include <QHBoxLayout>
+#include <QLCDNumber>
+#include <QLabel>
+#include <QPushButton>
+#include <QShortcut>
+#include <QVBoxLayout>
+#include <QWidget>
 
-#include "ShootGame/CannonField.h"
-#include "ShootGame/GameBoard.h"
-#include "ShootGame/LCDRange.h"
+#include "CannonField.h"
+#include "GameBoard.h"
+#include "LCDRange.h"
 
 GameBoard::GameBoard(QWidget *parent)
     : QWidget(parent)

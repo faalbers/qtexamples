@@ -1,9 +1,9 @@
-#include <QtGui/QLCDNumber>
-#include <QtGui/QLabel>
-#include <QtGui/QSlider>
-#include <QtGui/QVBoxLayout>
+#include <QLCDNumber>
+#include <QLabel>
+#include <QSlider>
+#include <QVBoxLayout>
 
-#include "ShootGame/LCDRange.h"
+#include "LCDRange.h"
 
 LCDRange::LCDRange(QWidget *parent)
     : QWidget(parent)

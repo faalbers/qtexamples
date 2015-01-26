@@ -1,7 +1,7 @@
 #ifndef CANNONFIELD_H
 #define CANNONFIELD_H
 
-#include <QtGui/QWidget>
+#include <QWidget>
 
 class QTimer;
 
