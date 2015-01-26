@@ -1,5 +1,5 @@
-#ifndef __MAINWINDOW__
-#define __MAINWINDOW__
+#ifndef __FP_MAINWINDOW__
+#define __FP_MAINWINDOW__
 
 #include <QtGui/QMainWindow>
 #include <QtGui/QWidget>

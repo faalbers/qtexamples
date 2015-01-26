@@ -1,8 +1,8 @@
 #ifndef __PLOTAREA__
 #define __PLOTAREA__
 
-#include <QtGui/QWidget>
-#include <QtGui/QPixmap>
+#include <QWidget>
+#include <QPixmap>
 
 class PlotArea : public QWidget
 {

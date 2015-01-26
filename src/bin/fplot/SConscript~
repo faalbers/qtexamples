@@ -1,11 +1,12 @@
-Import('env')
+Import('qtEnv')
+
+envc = qtEsnv.Clone()
 
 progname = 'fplot'
 
-env.Program(progname, 'main.cpp')
-env.Append(LIBS=['FPlot'])
+envc.Append(LIBS=['FPlot'])
 
-if env['PLATFORM'] == 'posix':
-    env.Install('#inst/bin', progname)
-elif env['PLATFORM'] == 'win32':
-    env.Install('#inst/bin', '%s.exe' % progname)
+envc.Program(progname, 'main.cpp')
+
+envc.Install('#inst/bin', progname)
+

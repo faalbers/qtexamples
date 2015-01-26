@@ -1,9 +1,8 @@
 #ifndef __FP_MAINWINDOW__
 #define __FP_MAINWINDOW__
 
-#include <QtGui/QMainWindow>
-#include <QtGui/QWidget>
-#include "FPlot/PlotArea.h"
+#include <QMainWindow>
+#include "PlotArea.h"
 
 class MainWindow : public QMainWindow
 {

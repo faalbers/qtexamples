@@ -1,10 +1,25 @@
-Import('env')
+Import('qtEnv')
+libEnv = qtEnv.Clone()
 
-env.Library('FPlot', SConscript('FPlot/SConscript'))
-env.Library('MThread', SConscript('MThread/SConscript'))
-env.Library('OGL', SConscript('OGL/SConscript'))
-env.Library('ShootGame', SConscript('ShootGame/SConscript'))
-env.Library('ImageUpdate', SConscript('ImageUpdate/SConscript'))
+libEnv.Append(CPPPATH = ['#/src/lib'])
+
+Export('libEnv')
+
+SConscript('FPlot/SConscript')
+#libObjects = SConscript('FPlot/SConscript')
+
+#print 'Retrieved objects'
+#print libObjects
+
+#objects = SConscript('FPlot/SConscript')
+
+#print objetcs
+
+#libEnv.Library('FPlot', SConscript('FPlot/SConscript'))
+#env.Library('MThread', SConscript('MThread/SConscript'))
+#env.Library('OGL', SConscript('OGL/SConscript'))
+#env.Library('ShootGame', SConscript('ShootGame/SConscript'))
+#env.Library('ImageUpdate', SConscript('ImageUpdate/SConscript'))
 
 
 
