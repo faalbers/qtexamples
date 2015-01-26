@@ -1,8 +1,8 @@
 #ifndef __MT_MAINWINDOW__
 #define __MT_MAINWINDOW__
 
-#include <QtGui/QMainWindow>
-#include <QtGui/QWidget>
+#include <QMainWindow>
+//#include <QWidget>
 
 #include <iostream>
 

@@ -1,9 +1,0 @@
-Import('env')
-
-env.Program('mthread', 'main.cpp')
-env.Append(LIBS=['MThread'])
-
-if env['PLATFORM'] == 'posix':
-    env.Install('#inst/bin', 'mthread')
-elif env['PLATFORM'] == 'win32':
-    env.Install('#inst/bin', 'mthread.exe')

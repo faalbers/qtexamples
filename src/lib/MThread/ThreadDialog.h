@@ -1,10 +1,10 @@
 #ifndef __THREADDIALOG__
 #define __THREADDIALOG__
 
-#include <QtGui/QDialog>
-#include <QtGui/QWidget>
-#include <QtGui/QPushButton>
-#include "MThread/Thread.h"
+#include <QDialog>
+#include <QWidget>
+#include <QPushButton>
+#include "Thread.h"
 
 class ThreadDialog : public QDialog
 {

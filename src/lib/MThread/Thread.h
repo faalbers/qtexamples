@@ -1,7 +1,7 @@
 #ifndef __THREAD__
 #define __THREAD__
 
-#include <QtCore/QThread>
+#include <QThread>
 
 class Thread : public QThread
 {
