@@ -1,6 +1,0 @@
-SConscript('fplot/SConscript')
-SConscript('mthread/SConscript')
-#SConscript('ogl/SConscript')
-SConscript('shootgame/SConscript')
-SConscript('imageupdate/SConscript')
-
