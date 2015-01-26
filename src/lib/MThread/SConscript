@@ -1,16 +1,9 @@
-Import('env')
+Import('libEnv')
 
-cpps = Split("""
-    MainWindow.cpp
-    Thread.cpp
-    ThreadDialog.cpp
-""")
+libEnv.EnableQt5Modules(['QtWidgets'])
 
-class_objs = []
+libObjects = libEnv.Object(Glob('*.cpp')+Glob('*.qrc'))
 
-for cpp in cpps:
-    class_obj = env.Object(cpp)
-    class_objs.append(class_obj)
+Return('libObjects')
 
-Return('class_objs')
 

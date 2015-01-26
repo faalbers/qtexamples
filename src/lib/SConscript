@@ -2,24 +2,15 @@ Import('qtEnv')
 libEnv = qtEnv.Clone()
 
 libEnv.Append(CPPPATH = ['#/src/lib'])
+libEnv.EnableQt5Modules(['QtWidgets'])
 
 Export('libEnv')
 
-SConscript('FPlot/SConscript')
-#libObjects = SConscript('FPlot/SConscript')
-
-#print 'Retrieved objects'
-#print libObjects
-
-#objects = SConscript('FPlot/SConscript')
-
-#print objetcs
-
-#libEnv.Library('FPlot', SConscript('FPlot/SConscript'))
-#env.Library('MThread', SConscript('MThread/SConscript'))
-#env.Library('OGL', SConscript('OGL/SConscript'))
-#env.Library('ShootGame', SConscript('ShootGame/SConscript'))
-#env.Library('ImageUpdate', SConscript('ImageUpdate/SConscript'))
+libEnv.Library('FPlot', SConscript('FPlot/SConscript'))
+#libEnv.Library('MThread', SConscript('MThread/SConscript'))
+#libEnv.Library('OGL', SConscript('OGL/SConscript'))
+#libEnv.Library('ShootGame', SConscript('ShootGame/SConscript'))
+#libEnv.Library('ImageUpdate', SConscript('ImageUpdate/SConscript'))
 
 
 

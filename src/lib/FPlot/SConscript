@@ -1,12 +1,7 @@
 Import('libEnv')
 
-libEnv.EnableQt5Modules(['QtWidgets'])
+objs = libEnv.Object(Glob('*.cpp')+Glob('*.qrc'))
 
-libObjects = libEnv.Object(Glob('*.cpp')+Glob('*.qrc'))
-
-print 'Build objects:'
-print libObjects
-
-Return(libObjects)
+Return('objs')
 
 

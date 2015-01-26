@@ -1,7 +1,5 @@
 #Import('env')
 
-#env.Append(CPPPATH = ['#'+Dir('.').path+'/lib'])
-#env.Append(LIBPATH = ['#'+Dir('.').path+'/lib'])
-
-#SConscript('bin/SConscript')
 SConscript('lib/SConscript')
+SConscript('bin/SConscript')
+

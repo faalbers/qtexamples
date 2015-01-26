@@ -1,12 +1,11 @@
-Import('qtEnv')
+Import('binEnv')
 
-envc = qtEnv.Clone()
+env = binEnv.Clone()
 
-progname = 'fplot'
+env.Append(LIBS=['FPlot'])
+env.EnableQt5Modules(['QtWidgets'])
 
-envc.Append(LIBS=['FPlot'])
+env.Program('fplot', 'main.cpp')
 
-envc.Program(progname, 'main.cpp')
-
-envc.Install('#inst/bin', progname)
+env.Install('#inst/bin', 'fplot')
 
