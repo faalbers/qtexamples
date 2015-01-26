@@ -1,27 +1,28 @@
 import os
 
-platform = Environment()['PLATFORM']
-if platform == 'posix':
-    if os.environ['USER'] == 'frank':
-        os.environ['QTDIR'] = '/home/frank/QtSDK/Desktop/Qt/474/gcc'
-    else:
-        os.environ['QTDIR'] = '/pixar/d2/sets/tools-base-02'
-elif platform == 'win32':
-    os.environ['QTDIR'] = 'C:/Qt/4.7.4'
+# Set your qt5 path
+#qt5dir = '/home/afrank/QT521/5.2.1/gcc_64'
+qt5dir = '/home/frank/Qt/5.3/gcc_64'
 
-env = Environment(tools=['default','qt'])
+# Create base environment
+baseEnv = Environment()
+#...further customization of base env
 
-if env['PLATFORM'] == 'posix':
-    env['QT_LIB'] = Split("""
-        QtCore
-        QtGui
-    """)
-elif env['PLATFORM'] == 'win32':
-    env['QT_LIB'] = Split("""
-        QtCore4
-        QtGui4
-    """)
+# Clone Qt environment
+qtEnv = baseEnv.Clone()
+# Set QT5DIR and PKG_CONFIG_PATH
+qtEnv['ENV']['PKG_CONFIG_PATH'] = os.path.join(qt5dir, 'lib/pkgconfig')
+qtEnv['QT5DIR'] = qt5dir
+# Add qt5 tool
+qtEnv.Tool('qt5')
+#...further customization of qt env
+qtEnv.Append( CPPFLAGS='-fPIC')
 
-Export('env')
+# Export environments
+Export('baseEnv qtEnv')
+
+# Your other stuff...
+# ...including the call to your SConscripts
 
 SConscript('SConscript')
+
