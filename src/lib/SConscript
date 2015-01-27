@@ -2,7 +2,9 @@ Import('qtEnv')
 libEnv = qtEnv.Clone()
 
 libEnv.Append(CPPPATH = ['#/src/lib'])
-libEnv.EnableQt5Modules(['QtWidgets'])
+libEnv.EnableQt5Modules(['QtWidgets', 'QtOpenGL'])
+
+libEnv.Append(CPPPATH = ['$TOOLSPATH/include'])
 
 Export('libEnv')
 
@@ -10,7 +12,7 @@ libEnv.Library('FPlot', SConscript('FPlot/SConscript'))
 libEnv.Library('MThread', SConscript('MThread/SConscript'))
 libEnv.Library('ShootGame', SConscript('ShootGame/SConscript'))
 libEnv.Library('ImageUpdate', SConscript('ImageUpdate/SConscript'))
-#libEnv.Library('OGL', SConscript('OGL/SConscript'))
+libEnv.Library('OGL', SConscript('OGL/SConscript'))
 
 
 

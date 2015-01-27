@@ -78,7 +78,7 @@
 
 ****************************************************************************/
 
-#include "qtlogo.h"
+#include "QtLogo.h"
 
 static const qreal tee_height = 0.311126;
 
@@ -324,7 +324,7 @@ static inline void qMultMatrix(const QMatrix4x4 &mat)
 
         GLfloat fmat[16];
 
-        qreal const *r = mat.constData();
+        float  const *r = mat.constData();
 
         for (int i = 0; i < 16; ++i)
 

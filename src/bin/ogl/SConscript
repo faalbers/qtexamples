@@ -1,12 +1,14 @@
-Import('env')
-envc = env.Clone()
+Import('binEnv')
 
-progname = 'ogl'
+env = binEnv.Clone()
 
-envc.Program(progname, 'main.cpp')
-envc.Append(LIBS=['OGL'])
+env.Append(LIBS=['GLEW', 'OGL'])
+env.EnableQt5Modules(['QtWidgets', 'QtOpenGL'])
 
-if envc['PLATFORM'] == 'posix':
-    envc.Install('#inst/bin', progname)
-elif envc['PLATFORM'] == 'win32':
-    envc.Install('#inst/bin', '%s.exe' % progname)
+env.Append(CPPPATH = ['$TOOLSPATH/include'])
+env.Append(LIBPATH = ['$TOOLSPATH/lib64'])
+
+env.Program('ogl', 'main.cpp')
+
+env.Install('#inst/bin', 'ogl')
+

@@ -7,6 +7,8 @@ qt5dir = '/home/afrank/QT521/5.2.1/gcc_64'
 # Create base environment
 baseEnv = Environment()
 #...further customization of base env
+baseEnv['TOOLSPATH'] = '/pixar/d2/sets/tools-base-02'
+#baseEnv.Append(LIBPATH = [toolspath+'/lib'])
 
 # Clone Qt environment
 qtEnv = baseEnv.Clone()

@@ -2,8 +2,8 @@
 #define GLWIDGET_H
 
 #include <GL/glew.h>
-#include <QtOpenGL/QtOpenGL>
-#include <QtOpenGL/QGLWidget>
+#include <QMatrix4x4>
+#include <QGLWidget>
 #include "ShaderUtils.h"
 
 struct attributes {

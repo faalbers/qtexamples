@@ -1,8 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QtGui/QMainWindow>
-#include "OGL/GLWidget.h"
+#include <QMainWindow>
+#include "GLWidget.h"
 
 class MainWindow : public QMainWindow
 {

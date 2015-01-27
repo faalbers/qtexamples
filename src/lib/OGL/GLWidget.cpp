@@ -1,6 +1,8 @@
 #include <math.h>
 #include <cstdio>
-#include "OGL/GLWidget.h"
+#include "GLWidget.h"
+#include <QTimer>
+#include <QMouseEvent>
 #include <iostream>
 #include <fstream>
 #include <sstream>

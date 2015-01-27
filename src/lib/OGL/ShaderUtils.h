@@ -3,7 +3,7 @@
 
 
 #include <GL/glew.h>
-#include <QtOpenGL/QGLWidget>
+#include <QGLWidget>
 #include <cstdio>
 
 using namespace std;
