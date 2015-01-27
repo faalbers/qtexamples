@@ -9,6 +9,6 @@ Export('binEnv')
 SConscript('fplot/SConscript')
 SConscript('mthread/SConscript')
 SConscript('shootgame/SConscript')
+SConscript('imageupdate/SConscript')
 #SConscript('ogl/SConscript')
-#SConscript('imageupdate/SConscript')
 

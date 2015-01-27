@@ -1,12 +1,11 @@
-Import('env')
-envc = env.Clone()
+Import('binEnv')
 
-progname = 'imageupdate'
+env = binEnv.Clone()
 
-envc.Program(progname, 'main.cpp')
-envc.Append(LIBS=['ImageUpdate'])
+env.Append(LIBS=['ImageUpdate'])
+env.EnableQt5Modules(['QtWidgets'])
 
-if envc['PLATFORM'] == 'posix':
-    envc.Install('#inst/bin', progname)
-elif envc['PLATFORM'] == 'win32':
-    envc.Install('#inst/bin', '%s.exe' % progname)
+env.Program('imageupdate', 'main.cpp')
+
+env.Install('#inst/bin', 'imageupdate')
+

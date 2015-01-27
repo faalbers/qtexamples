@@ -1,5 +1,5 @@
-#include "ImageUpdate/Thread.h"
-#include <QtGui/QColor>
+#include "Thread.h"
+#include <QColor>
 #include <iostream>
 
 using namespace std;

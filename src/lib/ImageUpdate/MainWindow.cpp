@@ -1,9 +1,9 @@
-#include "ImageUpdate/MainWindow.h"
-#include <QtGui/QWidget>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QPushButton>
-#include <QtGui/QGraphicsView>
+#include "MainWindow.h"
+#include <QWidget>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QGraphicsView>
 #include <iostream>
 
 using namespace std;

@@ -1,10 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QtGui/QMainWindow>
-#include <QtGui/QImage>
-#include "ImageUpdate/Thread.h"
-#include <QtGui/QGraphicsScene>
+#include <QMainWindow>
+#include <QImage>
+#include "Thread.h"
+#include <QGraphicsScene>
 
 class MainWindow : public QMainWindow
 {

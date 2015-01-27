@@ -1,9 +1,9 @@
 #ifndef __THREAD__
 #define __THREAD__
 
-#include <QtCore/QThread>
-#include <QtCore/QSharedPointer>
-#include <QtGui/QImage>
+#include <QThread>
+#include <QSharedPointer>
+#include <QImage>
 
 class Thread : public QThread
 {
