@@ -18,7 +18,10 @@ qtEnv['QT5DIR'] = qt5dir
 # Add qt5 tool
 qtEnv.Tool('qt5')
 #...further customization of qt env
-qtEnv.Append( CPPFLAGS='-fPIC')
+qtEnv.Append( CPPFLAGS = [
+    '-fPIC'
+    ,'-std=c++98'
+    ])
 
 # Export environments
 Export('baseEnv qtEnv')

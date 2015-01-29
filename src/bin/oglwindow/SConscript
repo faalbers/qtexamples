@@ -1,0 +1,15 @@
+Import('binEnv')
+
+env = binEnv.Clone()
+
+#env.Append(LIBS=['GLEW', 'OGL'])
+#env.EnableQt5Modules(['QtWidgets', 'QtOpenGL'])
+env.EnableQt5Modules(['QtGui'])
+
+#env.Append(CPPPATH = ['$TOOLSPATH/include'])
+#env.Append(LIBPATH = ['$TOOLSPATH/lib64'])
+
+env.Program('oglwindow', Glob('*.cpp')+Glob('*.qrc'))
+
+env.Install('#inst/bin', 'oglwindow')
+

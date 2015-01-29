@@ -10,5 +10,6 @@ Export('binEnv')
 #SConscript('mthread/SConscript')
 #SConscript('shootgame/SConscript')
 #SConscript('imageupdate/SConscript')
-SConscript('ogl/SConscript')
+#SConscript('ogl/SConscript')
+SConscript('oglwindow/SConscript')
 
