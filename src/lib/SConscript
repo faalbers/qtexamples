@@ -8,10 +8,10 @@ libEnv.Append(CPPPATH = ['$TOOLSPATH/include'])
 
 Export('libEnv')
 
-#libEnv.Library('FPlot', SConscript('FPlot/SConscript'))
-#libEnv.Library('MThread', SConscript('MThread/SConscript'))
-#libEnv.Library('ShootGame', SConscript('ShootGame/SConscript'))
-#libEnv.Library('ImageUpdate', SConscript('ImageUpdate/SConscript'))
+libEnv.Library('FPlot', SConscript('FPlot/SConscript'))
+libEnv.Library('MThread', SConscript('MThread/SConscript'))
+libEnv.Library('ShootGame', SConscript('ShootGame/SConscript'))
+libEnv.Library('ImageUpdate', SConscript('ImageUpdate/SConscript'))
 #libEnv.Library('OGL', SConscript('OGL/SConscript'))
 
 
