@@ -1,4 +1,3 @@
-/*
 #include "OpenGLWindow.h"
 
 #include <QtCore/QCoreApplication>
@@ -21,13 +20,14 @@ OpenGLWindow::~OpenGLWindow()
 {
     delete m_device;
 }
-void OpenGLWindow::render(QPainter *painter)
-{
-    Q_UNUSED(painter);
-}
 
 void OpenGLWindow::initialize()
 {
+}
+
+void OpenGLWindow::render(QPainter *painter)
+{
+    Q_UNUSED(painter);
 }
 
 void OpenGLWindow::render()
@@ -41,6 +41,7 @@ void OpenGLWindow::render()
 
     QPainter painter(m_device);
     render(&painter);
+
 }
 
 void OpenGLWindow::renderLater()
@@ -99,60 +100,6 @@ void OpenGLWindow::renderNow()
 
     if (m_animating)
         renderLater();
-}
-
-void OpenGLWindow::setAnimating(bool animating)
-{
-    m_animating = animating;
-
-    if (animating)
-        renderLater();
-}
-*/
-#include "OpenGLWindow.h"
-
-#include <QtGui/QOpenGLContext>
-#include <QtGui/QOpenGLPaintDevice>
-
-OpenGLWindow::OpenGLWindow(QWindow *parent)
-    : QWindow(parent)
-    , m_update_pending(false)
-    , m_animating(false)
-    , m_context(0)
-    , m_device(0)
-{
-    setSurfaceType(QWindow::OpenGLSurface);
-}
-
-OpenGLWindow::~OpenGLWindow()
-{
-    delete m_device;
-}
-
-void OpenGLWindow::initialize()
-{
-}
-
-void OpenGLWindow::render(QPainter *painter)
-{
-    Q_UNUSED(painter);
-}
-
-void OpenGLWindow::render()
-{
-    if (!m_device)
-        m_device = new QOpenGLPaintDevice;
-
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
-
-}
-
-void OpenGLWindow::renderLater()
-{
-}
-
-void OpenGLWindow::renderNow()
-{
 }
 
 void OpenGLWindow::setAnimating(bool animating)

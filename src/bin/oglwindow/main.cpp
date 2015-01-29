@@ -1,12 +1,21 @@
+//http://doc.qt.io/qt-5/qtgui-openglwindow-example.html
 /*
 #include "OpenGLWindow.h"
 
 #include <QtGui/QGuiApplication>
 #include <QtGui/QMatrix4x4>
 #include <QtGui/QOpenGLShaderProgram>
-#include <QtGui/QScreen>
 
 #include <QtCore/qmath.h>
+
+
+*/
+#include "OpenGLWindow.h"
+
+#include <QtGui/QGuiApplication>
+#include <QtGui/QSurfaceFormat>
+#include <QtGui/QOpenGLShaderProgram>
+#include <QtGui/QScreen>
 
 class TriangleWindow : public OpenGLWindow
 {
@@ -33,23 +42,6 @@ TriangleWindow::TriangleWindow()
 {
 }
 
-int main(int argc, char **argv)
-{
-    QGuiApplication app(argc, argv);
-
-    QSurfaceFormat format;
-    format.setSamples(16);
-
-    TriangleWindow window;
-    window.setFormat(format);
-    window.resize(640, 480);
-    window.show();
-
-    window.setAnimating(true);
-
-    return app.exec();
-}
-
 static const char *vertexShaderSource =
     "attribute highp vec4 posAttr;\n"
     "attribute lowp vec4 colAttr;\n"
@@ -65,6 +57,7 @@ static const char *fragmentShaderSource =
     "void main() {\n"
     "   gl_FragColor = col;\n"
     "}\n";
+
 
 GLuint TriangleWindow::loadShader(GLenum type, const char *source)
 {
@@ -127,37 +120,6 @@ void TriangleWindow::render()
     m_program->release();
 
     ++m_frame;
-}
-*/
-#include "OpenGLWindow.h"
-
-#include <QtGui/QGuiApplication>
-#include <QtGui/QSurfaceFormat>
-#include <QtGui/QOpenGLShaderProgram>
-
-class TriangleWindow : public OpenGLWindow
-{
-public:
-    TriangleWindow();
-
-    void initialize() Q_DECL_OVERRIDE;
-    void render() Q_DECL_OVERRIDE;
-
-private:
-    QOpenGLShaderProgram *m_program;
-    int m_frame;
-};
-
-TriangleWindow::TriangleWindow()
-{
-}
-
-void TriangleWindow::initialize()
-{
-}
-
-void TriangleWindow::render()
-{
 }
 
 int main(int argc, char **argv)
