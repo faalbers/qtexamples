@@ -22,7 +22,7 @@ qtEnv.Tool('qt5')
 #...further customization of qt env
 qtEnv.Append( CPPFLAGS = [
     '-fPIC'
-    ,'-std=c++98'
+    ,'-std=c++0x'
     ])
 
 # Export environments
