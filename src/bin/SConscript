@@ -6,9 +6,9 @@ binEnv.Append(LIBPATH = ['#gen/lib'])
 
 Export('binEnv')
 
+SConscript('shootgame/SConscript')
 SConscript('fplot/SConscript')
 SConscript('mthread/SConscript')
-SConscript('shootgame/SConscript')
 SConscript('imageupdate/SConscript')
 #SConscript('ogl/SConscript')
 SConscript('oglwindow/SConscript')

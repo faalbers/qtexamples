@@ -1,8 +1,10 @@
 import os
 
 # Set your qt5 path
-qt5dir = '/home/afrank/QT521/5.2.1/gcc_64'
-#qt5dir = '/home/frank/Qt/5.3/gcc_64'
+#PIXAR_FEDORA:qt5dir = '/home/afrank/QT521/5.2.1/gcc_64'
+#LAPTOP_UBUNTU:qt5dir = '/home/frank/Qt/5.3/gcc_64'
+#DESKTOP_UBUNTU:qt5dir = '/home/frank/Qt5.4.0/5.4/gcc_64'
+qt5dir = '/home/frank/Qt5.4.0/5.4/gcc_64'
 
 # Create base environment
 baseEnv = Environment()
