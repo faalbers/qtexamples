@@ -1,5 +1,5 @@
-#include <QtGui/QWindow>
-#include <QtGui/QOpenGLFunctions>
+#include <QWindow>
+#include <QOpenGLFunctions>
 
 class QPainter;
 class QOpenGLContext;

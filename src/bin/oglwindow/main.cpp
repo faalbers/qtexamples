@@ -1,21 +1,10 @@
 //http://doc.qt.io/qt-5/qtgui-openglwindow-example.html
-/*
 #include "OpenGLWindow.h"
 
-#include <QtGui/QGuiApplication>
-#include <QtGui/QMatrix4x4>
-#include <QtGui/QOpenGLShaderProgram>
-
-#include <QtCore/qmath.h>
-
-
-*/
-#include "OpenGLWindow.h"
-
-#include <QtGui/QGuiApplication>
-#include <QtGui/QSurfaceFormat>
-#include <QtGui/QOpenGLShaderProgram>
-#include <QtGui/QScreen>
+#include <QGuiApplication>
+#include <QSurfaceFormat>
+#include <QOpenGLShaderProgram>
+#include <QScreen>
 
 class TriangleWindow : public OpenGLWindow
 {
