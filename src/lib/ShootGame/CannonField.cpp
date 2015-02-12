@@ -1,4 +1,4 @@
-#include <QDateTime>
+#include <QtCore/QDateTime>
 #include <QMouseEvent>
 #include <QPaintEvent>
 #include <QPainter>

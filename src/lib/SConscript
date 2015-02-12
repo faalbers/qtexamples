@@ -2,9 +2,9 @@ Import('qtEnv')
 libEnv = qtEnv.Clone()
 
 libEnv.Append(CPPPATH = ['#/src/lib'])
-libEnv.EnableQt5Modules(['QtWidgets', 'QtOpenGL'])
+libEnv.EnableQt5Modules(['QtCore', 'QtWidgets', 'QtGui', 'QtOpenGL'])
 
-libEnv.Append(CPPPATH = ['$TOOLSPATH/include'])
+#libEnv.Append(CPPPATH = ['$TOOLSPATH/include'])
 
 Export('libEnv')
 

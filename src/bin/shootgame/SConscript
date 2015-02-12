@@ -3,9 +3,12 @@ Import('binEnv')
 env = binEnv.Clone()
 
 env.Append(LIBS=['ShootGame'])
-env.EnableQt5Modules(['QtWidgets'])
+env.EnableQt5Modules(['QtCore', 'QtWidgets', 'QtGui'])
 
 env.Program('shootgame', 'main.cpp')
 
-env.Install('#inst/bin', 'shootgame')
+if env['PLATFORM'] == 'posix':
+    env.Install('#inst/bin', 'shootgame')
+elif env['PLATFORM'] == 'win32':
+    env.Install('#inst/bin', 'shootgame.exe')
 

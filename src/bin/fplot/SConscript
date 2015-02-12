@@ -3,9 +3,12 @@ Import('binEnv')
 env = binEnv.Clone()
 
 env.Append(LIBS=['FPlot'])
-env.EnableQt5Modules(['QtWidgets'])
+env.EnableQt5Modules(['QtCore', 'QtWidgets', 'QtGui'])
 
 env.Program('fplot', 'main.cpp')
 
-env.Install('#inst/bin', 'fplot')
+if env['PLATFORM'] == 'posix':
+    env.Install('#inst/bin', 'fplot')
+elif env['PLATFORM'] == 'win32':
+    env.Install('#inst/bin', 'fplot.exe')
 

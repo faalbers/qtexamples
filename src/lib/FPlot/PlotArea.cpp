@@ -1,5 +1,5 @@
 #include "FPlot/PlotArea.h"
-#include <QtGui/QPainter>
+#include <QPainter>
 
 PlotArea::PlotArea(QWidget* parent)
     :   QWidget(parent),
